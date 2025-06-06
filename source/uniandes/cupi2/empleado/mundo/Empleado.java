@@ -10,6 +10,8 @@
  */
 package uniandes.cupi2.empleado.mundo;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -238,9 +240,13 @@ public class Empleado
      * Método para la extensión 1.
      * @return Respuesta 1.
      */
-    public String metodo1( )
+    public String metodo1(int edad)
     {
-        return "Respuesta 1";
+    	if(edad >= 18) {    		
+    		return "El empleado es mayor de edad";
+    	} else {
+    		return "El empleado es menor de edad";
+    	}
     }
 
     /**
@@ -249,7 +255,11 @@ public class Empleado
      */
     public String metodo2( )
     {
-        return "Respuesta 2";
+        DecimalFormat df = ( DecimalFormat )NumberFormat.getInstance( );
+        df.applyPattern( "$###,###.##" );
+        String Salario = df.format( salario );
+        
+        return "El empleado " + nombre + " " + apellido + " tiene " + this.calcularEdad() + " años de edad con un salario de " + Salario;
     }
 
 }

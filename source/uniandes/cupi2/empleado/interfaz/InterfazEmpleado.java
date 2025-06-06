@@ -229,7 +229,7 @@ public class InterfazEmpleado extends JFrame
      */
     public void reqFuncOpcion1( )
     {
-        String respuesta = empleado.metodo1( );
+        String respuesta = empleado.metodo1( empleado.calcularEdad() );
         actualizar( );
         JOptionPane.showMessageDialog( this, respuesta, "Respuesta", JOptionPane.INFORMATION_MESSAGE );
     }
