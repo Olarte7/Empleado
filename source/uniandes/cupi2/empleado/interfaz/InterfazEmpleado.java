@@ -70,7 +70,7 @@ public class InterfazEmpleado extends JFrame
     public InterfazEmpleado( )
     {
         setTitle( "Sistema de un empleado" );
-        setSize( 600, 580 );
+        setSize( 600, 600 );
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
         // Construir el empleado
